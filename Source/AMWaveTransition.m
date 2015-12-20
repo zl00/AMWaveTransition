@@ -28,6 +28,7 @@ typedef NS_ENUM(NSInteger, AMWaveTransitionViewControllers) {
 @end
 
 
+
 @interface UITableView (AMWaveTransition)
 - (NSArray*)am_visibleViews;
 @end
@@ -37,8 +38,8 @@ typedef NS_ENUM(NSInteger, AMWaveTransitionViewControllers) {
 
 #define SCREEN_WIDTH ((([UIApplication sharedApplication].statusBarOrientation == UIInterfaceOrientationPortrait) || ([UIApplication sharedApplication].statusBarOrientation == UIInterfaceOrientationPortraitUpsideDown)) ? [[UIScreen mainScreen] bounds].size.width : [[UIScreen mainScreen] bounds].size.height)
 
-const CGFloat DURATION = 0.65;
-const CGFloat MAX_DELAY = 0.15;
+const CGFloat DURATION = 0.65 * 1;
+const CGFloat MAX_DELAY = 0.15 * 1;
 
 - (void)dealloc {
     [self detachInteractiveGesture];
@@ -359,7 +360,7 @@ const CGFloat MAX_DELAY = 0.15;
     } else {
         toVC = (UIViewController*)([transitionContext viewControllerForKey:UITransitionContextToViewControllerKey]);
     }
-    
+
     [[transitionContext containerView] addSubview:toVC.view];
     
     CGFloat delta;
@@ -371,8 +372,6 @@ const CGFloat MAX_DELAY = 0.15;
     
     // Move the destination in place
     toVC.view.frame = [transitionContext finalFrameForViewController:toVC];
-    // And kick it aside
-    toVC.view.transform = CGAffineTransformMakeTranslation(delta, 0);
 
     [transitionContext containerView].backgroundColor = fromVC.view.backgroundColor;
 
@@ -397,7 +396,7 @@ const CGFloat MAX_DELAY = 0.15;
             [transitionContext completeTransition:YES];
         }];
     }
-
+    
     NSArray *fromViews = [self visibleCellsForViewController:fromVC];
     NSArray *toViews = [self visibleCellsForViewController:toVC];
 
@@ -410,6 +409,7 @@ const CGFloat MAX_DELAY = 0.15;
         if (!fromMode) {
             [view setTransform:CGAffineTransformMakeTranslation(delta, 0)];
         }
+        
         void (^animation)() = ^{
             if (fromMode) {
                 view.transform = CGAffineTransformMakeTranslation(-delta, 0);
@@ -434,7 +434,6 @@ const CGFloat MAX_DELAY = 0.15;
     };
 
 
-    currentViews = fromViews;
     NSArray *viewsArrays = @[fromViews, toViews];
 
     for (currentViews in viewsArrays) {

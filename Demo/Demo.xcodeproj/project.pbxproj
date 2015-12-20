@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		659633971B7E0887000CF7B3 /* AMWaveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 659633941B7E0887000CF7B3 /* AMWaveTransition.m */; };
-		659633981B7E0887000CF7B3 /* AMWaveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 659633961B7E0887000CF7B3 /* AMWaveViewController.m */; };
 		65A0940D1912473100596A86 /* FourthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65A0940C1912473100596A86 /* FourthViewController.m */; };
 		65BD291219114A28002AC110 /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65BD291119114A28002AC110 /* ThirdViewController.m */; };
 		65BD9C581A2DB45900BD0DC5 /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65BD9C571A2DB45900BD0DC5 /* Launch Screen.xib */; };
@@ -42,8 +41,6 @@
 /* Begin PBXFileReference section */
 		659633931B7E0887000CF7B3 /* AMWaveTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMWaveTransition.h; path = ../Source/AMWaveTransition.h; sourceTree = "<group>"; };
 		659633941B7E0887000CF7B3 /* AMWaveTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMWaveTransition.m; path = ../Source/AMWaveTransition.m; sourceTree = "<group>"; };
-		659633951B7E0887000CF7B3 /* AMWaveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMWaveViewController.h; path = ../Source/AMWaveViewController.h; sourceTree = "<group>"; };
-		659633961B7E0887000CF7B3 /* AMWaveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMWaveViewController.m; path = ../Source/AMWaveViewController.m; sourceTree = "<group>"; };
 		65A0940B1912473100596A86 /* FourthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FourthViewController.h; sourceTree = "<group>"; };
 		65A0940C1912473100596A86 /* FourthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FourthViewController.m; sourceTree = "<group>"; };
 		65BD291019114A28002AC110 /* ThirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdViewController.h; sourceTree = "<group>"; };
@@ -191,8 +188,6 @@
 			children = (
 				659633931B7E0887000CF7B3 /* AMWaveTransition.h */,
 				659633941B7E0887000CF7B3 /* AMWaveTransition.m */,
-				659633951B7E0887000CF7B3 /* AMWaveViewController.h */,
-				659633961B7E0887000CF7B3 /* AMWaveViewController.m */,
 			);
 			name = AMWaveTransition;
 			path = ../../AMWaveTransition;
@@ -325,7 +320,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				659633971B7E0887000CF7B3 /* AMWaveTransition.m in Sources */,
-				659633981B7E0887000CF7B3 /* AMWaveViewController.m in Sources */,
 				65A0940D1912473100596A86 /* FourthViewController.m in Sources */,
 				65E0374418FE6CC200EFA799 /* SecondViewController.m in Sources */,
 				65E0372018FE6BE200EFA799 /* ViewController.m in Sources */,
